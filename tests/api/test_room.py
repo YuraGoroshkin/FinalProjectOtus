@@ -8,6 +8,7 @@ from fixtures.Create_json_for_api import CreateJson
 port = f":3001"
 
 
+@allure.feature("Api")
 @pytest.mark.api
 def test_schema_room(api_client, request):
     base_url = f"{request.config.getoption('--url')}{port}/room/"
@@ -16,6 +17,7 @@ def test_schema_room(api_client, request):
     validate(instance=response.json(), schema=schema)
 
 
+@allure.feature("Api")
 @pytest.mark.api
 def test_add_room(api_client, request):
     url = request.config.getoption('--url')
@@ -25,6 +27,7 @@ def test_add_room(api_client, request):
     assert response.status_code == 201
 
 
+@allure.feature("Api")
 @pytest.mark.api
 def test_add_room_no_auth(api_client, request):
     url = request.config.getoption('--url')
@@ -33,6 +36,7 @@ def test_add_room_no_auth(api_client, request):
     assert response.status_code == 403
 
 
+@allure.feature("Api")
 @pytest.mark.parametrize('status, id', [(200, 1), (500, 200)])
 @pytest.mark.api
 def test_status_room_id(api_client, request, status, id):
