@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver import FirefoxOptions, ChromeOptions, EdgeOptions
 from selenium import webdriver
 from selenium.webdriver.support.events import EventFiringWebDriver, AbstractEventListener
+from selenium.webdriver.common.by import By
 import allure
 import json
 import requests
@@ -138,8 +139,10 @@ def browser(request):
     driver = EventFiringWebDriver(driver, WebdriverListener())
     driver.test_name = request.node.name
     driver.log_level = log_level
+
     if maximize:
         driver.maximize_window()
+    driver.find_element(By.XPATH, '//*[@id="collapseBanner"]/div/div[3]/div[2]/button').click()
     yield driver
     driver.quit()
 
