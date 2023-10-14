@@ -2,7 +2,7 @@ import allure
 import pytest
 from data_schema.message_schema import schema
 from jsonschema import validate
-from fixtures.Create_json_for_message import json_message
+from fixtures.Create_json_for_api import CreateJson
 
 
 @pytest.mark.api
@@ -20,5 +20,5 @@ def test_message_count(api_client):
 
 @pytest.mark.api
 def test_post_message(api_client):
-    response = api_client.post(url=api_client.base_url, json=json_message())
+    response = api_client.post(url=api_client.base_url, json=CreateJson().json_message())
     assert response.status_code == 201
