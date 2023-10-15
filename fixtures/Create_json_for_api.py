@@ -14,6 +14,7 @@ class CreateJson:
             "subject": fake.sentence(),
             "description": fake.text()
         }
+        print(data_message)
         return data_message
 
     def json_room(self):
@@ -29,4 +30,5 @@ class CreateJson:
             ],
             "roomPrice": randint(100, 999)
         }
+        print(data_room)
         return data_room
