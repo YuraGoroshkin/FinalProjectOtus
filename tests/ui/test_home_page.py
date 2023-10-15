@@ -7,7 +7,7 @@ fake = Faker()
 
 @pytest.mark.parametrize('characteristic, value',
                          [("20_characters", "there are 20 charact"),
-                          ("2000_characters", str(fake.random_number(digits=2000)))])
+                          ("2000_characters", str(fake.random_number(digits=2000)))], ids=["valid1", "valid2"])
 @pytest.mark.ui
 def test_send_valid_form(browser, characteristic, value):
     HomePage.submit_form(browser, description=value, )
@@ -18,7 +18,7 @@ def test_send_valid_form(browser, characteristic, value):
 
 @pytest.mark.parametrize('characteristic, value',
                          [("less_than_19_characters", "there are 20 charac"), ("emptiness", ""),
-                          ("more_than_2000", str(fake.random_number(digits=2001)))])
+                          ("more_than_2000", str(fake.random_number(digits=2001)))], ids=["not_valid1", "not_valid2", "not_valid3"])
 @pytest.mark.ui
 def test_send_not_valid_form_description(browser, characteristic, value):
     HomePage.submit_form(browser, description=value, )
@@ -29,7 +29,7 @@ def test_send_not_valid_form_description(browser, characteristic, value):
 
 @pytest.mark.parametrize('characteristic, value',
                          [("5_characters", "5 char"),
-                          ("100_characters", str(fake.random_number(digits=100)))])
+                          ("100_characters", str(fake.random_number(digits=100)))], ids=["valid1", "valid2"])
 @pytest.mark.ui
 def test_send_subject_form(browser, characteristic, value):
     HomePage.submit_form(browser, subject=value, )
@@ -40,7 +40,7 @@ def test_send_subject_form(browser, characteristic, value):
 
 @pytest.mark.parametrize('characteristic, value',
                          [("less_than_5_characters", str(fake.random_number(digits=3))), ("emptiness", ""),
-                          ("more_than_100", str(fake.random_number(digits=101 )))])
+                          ("more_than_100", str(fake.random_number(digits=101 )))], ids=["not_valid1", "not_valid2", "not_valid3"])
 @pytest.mark.ui
 def test_send_not_subject_form_description(browser, characteristic, value):
     HomePage.submit_form(browser, subject=value, )

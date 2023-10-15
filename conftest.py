@@ -44,7 +44,7 @@ def browser(request):
         logger = logging.getLogger(request.node.name)
         logger.setLevel(logging.INFO)
         ch = logging.FileHandler(filename=f"./logs/{request.node.name}.log")
-        ch.setFormatter(logging.Formatter('%(name)s'))
+        ch.setFormatter(logging.Formatter('%(name)s:%(levelname)s %(message)s'))
         ch.setLevel(log_map[log_level])
         logger.addHandler(ch)
 
