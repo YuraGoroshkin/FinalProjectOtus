@@ -19,4 +19,11 @@ class HomePage(Application):
     def get_acces_submit_form(self):
         sleep(0.1)
         data = self.find_element(By.XPATH, "//*/div[@class='col-sm-5']/div/h2").text
+        print(data)
+        return data
+
+    def get_alert_submit_form(self):
+        sleep(0.1)
+        data = self.find_element(By.XPATH, "//*[@class='alert alert-danger']").text
+        print(data)
         return data
