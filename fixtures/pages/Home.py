@@ -8,7 +8,7 @@ fake = Faker()
 
 
 class HomePage(Application):
-    def submit_form(self, name=f"{fake.name()}", email=f"{fake.email()}", phone=f"{fake.phone_number()}", subject=f"{fake.name()}", description=""):
+    def submit_form(self, name=f"{fake.name()}", email=f"{fake.email()}", phone=f"{fake.phone_number()}", subject=f"{fake.name()}", description=str(fake.random_number(digits=21))):
         self.find_element(By.XPATH, "//*[@data-testid='ContactName']").send_keys(name)
         self.find_element(By.XPATH, "//*[@data-testid='ContactEmail']").send_keys(email)
         self.find_element(By.XPATH, "//*[@data-testid='ContactPhone']").send_keys(phone)
