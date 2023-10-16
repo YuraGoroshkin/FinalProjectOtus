@@ -30,7 +30,7 @@ def test_add_room(api_client, request):
 @allure.feature("Api")
 @pytest.mark.parametrize('status, roomname', [(201, "simple"), (400, 100), (400, ""), (400, " "), (400, None)])
 @pytest.mark.api
-def test_add_room(api_client, request, roomname, status):
+def test_field_roomname(api_client, request, roomname, status):
     url = request.config.getoption('--url')
     api_auth(api_client, url)
     base_url = f"{url}{port}/room/"
