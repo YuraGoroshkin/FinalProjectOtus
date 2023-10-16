@@ -14,7 +14,7 @@ DRIVERS = os.path.expanduser
 
 
 def pytest_addoption(parser):
-    parser.addoption("--browser", default="edge")
+    parser.addoption("--browser", default="firefox")
     parser.addoption("--url", default="http://127.0.0.1", help="Http расширение и Ip")
     parser.addoption("--port", action="store", default="3006", help="Порт для API")
     parser.addoption("--path", action="store", default="/message/", help="Путь для API")

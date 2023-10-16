@@ -40,6 +40,7 @@ services:
     ports:
       - "80:80"
     restart: always
+
   jenkins:
     image: jenkins/jenkins:lts
     privileged: true
@@ -51,3 +52,14 @@ services:
     volumes:
         - /home/${myname}/jenkins_compose/jenkins_configuration:/var/jenkins_home
         - /var/run/docker.sock:/var/run/docker.sock
+
+  allure_server:
+    image: frankescobar/allure-docker-service
+    environment:
+      CHECK_RESULTS_EVERY_SECONDS: 1
+      KEEP_HISTORY: 1
+    ports:
+      - "5050:5050"
+    volumes:
+      - ./allure-results:/app/allure-results
+      - ./allure-report:/app/allure-report
