@@ -25,3 +25,23 @@
 ```sh
   docker-compose up -d
   ```
+
+**Запуск тестов:**
+Есть возможность выбрать какие тесты запустить, через мареры ui и api
+*  
+  ```sh
+  pytest -m ui
+  ```
+  * pytest 
+  ```sh
+  pytest -m api
+  ```
+
+**Отчёты:**
+
+Все отчёты сохроняются в корне проекта папки .allure-results и .allure-report
+Allure server мониторит данные папки и создаёт отчёты, последние доступны по ссылке
+```sh
+  http://127.0.0.1:5050/allure-docker-service/projects/default/reports/latest/index.html
+  ```
+Подробнее о возможностях allure-server в [источнике](https://github.com/fescobar/allure-docker-service)
