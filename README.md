@@ -18,9 +18,9 @@
 **Установка проекта:**
 
 * pip 
-  ```sh
-  pip install -r requirements.txt
-  ```
+```sh
+pip install -r requirements.txt
+```
 * docker-compose
 ```sh
   docker-compose up -d
