@@ -49,3 +49,5 @@ Allure server мониторит данные папки и создаёт от�
   http://127.0.0.1:5050/allure-docker-service/projects/default/reports/latest/index.html
   ```
 Подробнее о возможностях allure-server в [источнике](https://github.com/fescobar/allure-docker-service)
+
+<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaBFa27rE8O5sIOGyssfoj6WQrWg6dTDbraxI4lyqyN1JTzmvWsnQFZvKBreFxsYDvxvAMi6391LJxNv50GuIaOekG0sAQ=w1850-h944" alt="отчёт">
