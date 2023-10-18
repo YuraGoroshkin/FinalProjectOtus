@@ -28,13 +28,14 @@ pip install -r requirements.txt
 
 **Запуск тестов:**
 
+
 Есть возможность выбрать какие тесты запустить, через маркеры ui и api
 
 *  
   ```sh
   pytest -m ui
   ```
-  * pytest 
+*  
   ```sh
   pytest -m api
   ```
