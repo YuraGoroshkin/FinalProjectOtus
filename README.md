@@ -43,6 +43,7 @@ pip install -r requirements.txt
 **Отчёты:**
 
 Все отчёты сохроняются в корне проекта папки .allure-results и .allure-report
+
 Allure server мониторит данные папки и создаёт отчёты, последние доступны по ссылке
 ```sh
   http://127.0.0.1:5050/allure-docker-service/projects/default/reports/latest/index.html
