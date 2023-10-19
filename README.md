@@ -2,8 +2,8 @@
 **Финальный проект Otus на примере проекта Restful Booker Platform:**
 
   Платформа веб-сервисов, формирующая систему бронирования проживания и завтрака. Основная цель платформ — обучение других тому, как исследовать и тестировать платформы веб-сервисов, а также разрабатывать стратегии и внедрять автоматизацию в стратегиях тестирования.
-  https://automationintesting.online/
-  https://github.com/mwinteringham/restful-booker-platform
+  [общедоступный - пример проекта](https://automationintesting.online/)
+  [проект - github](https://github.com/mwinteringham/restful-booker-platform)
 
 **Зависимости:**
   * [Python] 3.10
