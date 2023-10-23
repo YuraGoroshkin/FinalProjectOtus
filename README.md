@@ -31,6 +31,17 @@ pip install -r requirements.txt
 **Запуск тестов:**
 
 
+Перед запуском тестов требуется узнать url проекта, если запуск был по умолчанию через docker-compose то контейнер rbp-proxy запустил проект на 127.0.0.1
+
+*  --url по умолчанию
+  ```sh
+  http://127.0.0.1
+  ```
+А для api тестов можно проверить доступность переходом в swagger под проекта сервиса, кторый требуется проверить, например(по умолчанию для message): http://localhost:3006/message/swagger-ui/index.html
+
+Подробнее смотри в [проекте - github](https://github.com/mwinteringham/restful-booker-platform) разделе API details
+
+
 Есть возможность выбрать какие тесты запустить, через маркеры ui и api
 
 *  
